@@ -1,0 +1,7 @@
+//before running app
+adb shell setprop log.tag.Fabric DEBUG
+adb shell setprop log.tag.CrashlyticsCore DEBUG
+//for disable use INFO flag
+
+//view the logs
+adb logcat -s Fabric CrashlyticsCore
