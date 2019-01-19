@@ -1,0 +1,8 @@
+//enable debug
+adb shell setprop log.tag.FA VERBOSE
+adb shell setprop log.tag.FA-SVC VERBOSE
+adb logcat -v time -s FA FA-SVC
+
+//start DebugView
+adb shell setprop debug.firebase.analytics.app <package_name> //enable
+adb shell setprop debug.firebase.analytics.app .none. //disable
