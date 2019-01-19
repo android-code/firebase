@@ -39,18 +39,4 @@ class MainActivity : AppCompatActivity() {
     private fun getThirdValue(values: ArrayList<Int>): Int {
         return values[2]
     }
-
-    //AUTOREPORTING--------------------------
-    //run to enable autoreporting if disabled
-    private fun enableCrashlytics() {
-        val enable = true //mock value, get from some preferences
-        if(enable)
-            Fabric.with(this, Crashlytics())
-    }
-
-    /*add to AndroidManifest to disable autoreporting
-    <meta-data
-        android:name="firebase_crashlytics_collection_enabled"
-        android:value="false" />
-    */
 }

@@ -1,0 +1,11 @@
+<!-- disable at build time but allow to enable at runtime -->
+<meta-data
+  android:name="firebase_performance_collection_enabled"
+  android:value="true" />
+
+<!-- disable at build time and don't allow to enable at runtime -->
+<meta-data
+  android:name="firebase_performance_collection_deactivated"
+  android:value="true" />
+
+FirebasePerformance.getInstance().isPerformanceCollectionEnabled = true //get value from pref or remote config

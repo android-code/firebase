@@ -1,0 +1,7 @@
+//add to AndroidManifest
+<meta-data
+  android:name="firebase_performance_logcat_enabled"
+  android:value="true" />
+
+//run in terminal
+adb logcat -s FirebasePerformance
