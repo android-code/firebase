@@ -1,0 +1,12 @@
+<!-- remote config defaults -->
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>show_tutorial</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>skin</key>
+        <value>old</value>
+    </entry>
+</defaultsMap>
