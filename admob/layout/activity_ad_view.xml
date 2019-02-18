@@ -1,0 +1,13 @@
+<!-- file content views: ViewGroup, View and AdView inside -->
+
+<!-- choose adSize from one of: BANNER, LARGE_BANNER, MEDIUM_RECTANGLE, 
+FULL_BANNER, LEADERBOARD, SMART_BANNER or define custom size 
+adUnitId as below is for developer testing purpose -->
+<com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    ads:adSize="BANNER"
+    ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+</com.google.android.gms.ads.AdView>
