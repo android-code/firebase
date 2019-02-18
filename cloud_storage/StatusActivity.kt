@@ -1,6 +1,7 @@
 class StatusActivity : AppCompatActivity() {
 
 	private lateinit var storageRef: StorageReference
+	private lateinit var uploadTask: UploadTask
 
 	override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -8,12 +9,12 @@ class StatusActivity : AppCompatActivity() {
 
         storageRef = FirebaseStorage.getInstance().reference
 
-        //some buttons click listeners
+        startUploadFileWithListeners()
     }
 
     private fun startUploadFileWithListeners() {
 	    val file = Uri.fromFile(File("path/file.jpg"))
-	    fileRef = storageRef.child("images/${file.lastPathSegment}")
+	    val fileRef = storageRef.child("images/${file.lastPathSegment}")
 
 	    //start and add listeners
 	    uploadTask = fileRef.putFile(file)
