@@ -1,0 +1,49 @@
+{
+  "message":{
+    "token":"abcdefghijklmnopqrstuvwxyz",
+    "notification":{
+      "title":"text",
+      "body":"content"
+    }
+  }
+}
+
+{
+  "message":{
+    "token":"abcdefghijklmnopqrstuvwxyz",
+    "data":{
+      "value" : "some value",
+      "body" : "some body",
+    }
+  }
+}
+
+{
+  "message":{
+    "token":"abcdefghijklmnopqrstuvwxyz",
+    "notification":{
+      "title":"text",
+      "body":"content"
+    },
+    "data" : {
+      "value" : "some value",
+      "body" : "some body"
+    }
+  }
+}
+
+{
+  "message":{
+    "token":"abcdefghijklmnopqrstuvwxyz",
+    "notification":{
+      "title":"text",
+      "body":"content"
+    },
+    "android" : {
+      "ttl" : "36000s",
+      "notification": {
+        "click_action":"OPEN_SETTINGS"
+      }
+    }
+  }
+}
