@@ -1,0 +1,12 @@
+<!-- file content configuration -->
+
+<!-- autoVerify flags is responsible for handling Dynamic Links using App Links -->
+<!-- add filter to MainActivity -->
+<intent-filter android:autoVerify="true">
+    <action android:name="android.intent.action.VIEW"/>
+    <category android:name="android.intent.category.DEFAULT"/>
+    <category android:name="android.intent.category.BROWSABLE"/>
+    <data android:host="androidcode.pl" android:scheme="http"/>
+</intent-filter>
+
+<!-- more file content configuration -->
