@@ -30,11 +30,11 @@ class NativeAdActivity : AppCompatActivity() {
 
     private fun showUnifiedNativeAd(parent: ViewGroup, ad: UnifiedNativeAd) {
         //inflate view where adView root should be UnifiedNativeAdView instance
-        val inflater = parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val adView = inflater.inflate(R.layout.custom_ad_layout, parent) as UnifiedNativeAdView
+        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val adView = inflater.inflate(R.layout.custom_ad_layout, null) as UnifiedNativeAdView
 
         //use ad data into some views like text or image
-        val headlineView = adView.findViewById<TextView>(R.id.ad_headline)
+        val headlineView = adView.findViewById<TextView>(R.id.adHeadline)
         headlineView.text = ad.headline
         adView.headlineView = headlineView
 

@@ -8,8 +8,9 @@ class CreateLinkActivity : AppCompatActivity() {
     }
 
     private fun prepareDynamicLink() {
+	    val uri = createUri("PARAM", "value1") //create uri with params
 	    val dynamicLink = FirebaseDynamicLinks.getInstance().createDynamicLink()
-	        .setLink(Uri.parse("http://www.androidcode.pl/"))
+	        .setLink(uri)
 	        .setDomainUriPrefix("http://androidcode.page.link")
 	        //set parameters for target platforms like Android, iOS, GoogleAnalytics or provide social media metatags
 	        .setAndroidParameters(DynamicLink.AndroidParameters.Builder("pl.androidcode")
@@ -28,8 +29,9 @@ class CreateLinkActivity : AppCompatActivity() {
 	}
 
 	private fun prepareShortDynamicLink() {
+	    val uri = createUri("PARAM", "value2") //create uri with params
 	    val shortLinkTask = FirebaseDynamicLinks.getInstance().createDynamicLink()
-	        .setLink(Uri.parse("http://www.androidcode.pl/"))
+	        .setLink(uri)
 	        .setDomainUriPrefix("http://androidcode.page.link")
 	        .setAndroidParameters(DynamicLink.AndroidParameters.Builder("pl.androidcode").build())
 	        .buildShortDynamicLink(ShortDynamicLink.Suffix.SHORT) //pass this arg to get shorten sufix
@@ -42,5 +44,12 @@ class CreateLinkActivity : AppCompatActivity() {
 
 	    //the link could be like below:
 	    //http://androidcode.page.link/abcd
+	}
+
+	private fun createUri(key: String, param: String): Uri {
+	    val builder = Uri.Builder()
+	    builder.scheme("http").authority("androidcode.pl")
+	        .appendQueryParameter(key, param)
+	    return builder.build()
 	}
 }

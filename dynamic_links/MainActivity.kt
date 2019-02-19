@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
 	            var deepLink: Uri? = null
 	            if (pendingDynamicLinkData != null) {
 	                deepLink = pendingDynamicLinkData.link
+	                //check query parametrs exist and values
+                    val param = deepLink.getQueryParameter("PARAM")
+                    //do something based on params
 	            }
 	        }.addOnFailureListener {
 	            //some action

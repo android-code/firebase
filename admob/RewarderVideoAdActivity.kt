@@ -41,7 +41,11 @@ class RewarderVideoAdActivity : AppCompatActivity(), RewardedVideoAdListener {
         rewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917", AdRequest.Builder().build())
     }
     override fun onRewardedVideoAdFailedToLoad(errorCode: Int) {}
-    override fun onRewardedVideoAdLoaded() {}
+    override fun onRewardedVideoAdLoaded() {
+        //check ad has been showed already
+        if(rewardedVideoAd.isLoaded)
+            rewardedVideoAd.show()
+    }
     override fun onRewardedVideoAdOpened() {}
     override fun onRewardedVideoStarted() {}
     override fun onRewardedVideoCompleted() {}
